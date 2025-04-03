@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LongTerm Power Solutions - Products</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -19,6 +20,19 @@
     </header>
     <main>
         <h2>Our Products</h2>
+        
+        <!-- Search Bar -->
+<div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search for items..." onkeyup="searchItems()">
+    <button type="button" class="search-button" onclick="searchItems()" arial-label="Search">
+        <i class="fas fa-search"></i>
+    </button>
+    <button type="button" class="clear-button" onclick="clearSearch()" arial-label="Clear Search">
+        <i class="fas fa-times"></i>
+    </button>
+    <div id="suggestions" class="suggestions-container"></div>
+</div>
+
         <div class="categories">
             <div class="category" id="tools">
                 <h3><a href="tools.html">Tools</a></h3>
@@ -32,7 +46,7 @@
         </div>
         
         <h2>All Products</h2>
-        <div class="all-products">
+        <div class="all-products" id="productList">
             <div class="product-item">
                 <img src="images/tool1.jpg" alt="Tool 1">
                 <h4>Tool 1</h4>
@@ -78,7 +92,9 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 LongTerm Power Solutions</p>
+        <p>&copy; 2023 LongTerm Power Solutions</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -129,3 +129,68 @@ footer {
         width: 100%; /* Full width on smaller screens */
     }
 }
+
+/* Search Bar Styles */
+.search-container {
+    margin: 20px 0;
+    text-align: center;
+    position: relative; /* Position relative for absolute positioning of the buttons */
+}
+
+#searchBar {
+    width: 80%;
+    padding: 10px 40px 10px 40px; /* Add padding to accommodate icons */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-button, .clear-button {
+    position: absolute; /* Position the buttons inside the search container */
+    top: 50%; /* Center them vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #333; /* Icon color */
+    font-size: 18px; /* Icon size */
+}
+
+.search-button {
+    right: 50px; /* Position the search icon */
+}
+
+.clear-button {
+    right: 10px; /* Position the clear icon */
+}
+
+.search-button:hover, .clear-button:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+#searchBar:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow effect */
+}
+
+.suggestions-container {
+    position: absolute;
+    width: 80%; /* Match the width of the search bar */
+    background-color: white; /* Background color for suggestions */
+    border: 1px solid #ccc; /* Border for suggestions */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensure it appears above other elements */
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Scroll if too many suggestions */
+    display: none; /* Initially hidden */
+}
+
+.suggestion-item {
+    padding: 10px; /* Padding for each suggestion */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
