@@ -194,3 +194,9 @@ footer {
 .suggestion-item:hover {
     background-color: #f0f0f0; /* Highlight on hover */
 }
+
+.loading-indicator {
+    margin-top: 10px; /* Space above the loading indicator */
+    font-size: 16px; /* Font size for the loading text */
+    color: #007BFF; /* Color for the loading text */
+}
