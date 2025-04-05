@@ -19,12 +19,15 @@
     Your email:
     <input type="email" name="email">
   </label>
+  <label for="mobile">Mobile Number (optional):</label>
+     <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="1234567890">
   <label>
     Your message:
     <textarea name="message"></textarea>
   </label>
   <!-- your other form fields go here -->
   <button type="submit">Send</button>
+  
 </form>
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -32,7 +35,12 @@
 
             const formData = new FormData(this);
             const data = Object.fromEntries(formData.entries());
-
+            
+            // Check if at least one of email or mobile is provided
+        if (!data.email && !data.mobile) {
+            document.getElementById('responseMessage').innerText = 'Please provide either an email or a mobile number.';
+            return;
+        }
             // Uncomment the following block for using a Node.js backend
             /*
             fetch('http://localhost:3000/send-email', {
@@ -51,6 +59,9 @@
             .then(data => {
                 document.getElementById('responseMessage').innerText = 'Message sent successfully!';
             })
+                .then(data => {
+                document.getElementById('responseMessage').innerText = 'Message sent successfully!';
+                document.getElementById('contactForm').reset(); // Reset the form
             .catch(error => {
                 document.getElementById('responseMessage').innerText = 'Error sending message: ' + error.message;
             });
