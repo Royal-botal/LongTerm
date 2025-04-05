@@ -200,3 +200,9 @@ footer {
     font-size: 16px; /* Font size for the loading text */
     color: #007BFF; /* Color for the loading text */
 }
+
+.product-item img {
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: add rounded corners */
+}
