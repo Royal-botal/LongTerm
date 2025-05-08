@@ -1,13 +1,12 @@
 // Sample product data
 const products = [
-    { name: "Tool 1", price: "$50", description: "High-quality tool for various tasks.", status: "In Stock", image: "images/tool1.jpg" },
-    { name: "Tool 2", price: "$30", description: "Durable and reliable tool.", status: "Out of Stock", image: "images/tool2.jpg" },
+    { name: "Tool 1", price: $360, description: "High-quality tool for various tasks.", status: "In Stock", image: "images/tool1.jpg" },
+    { name: "Tool 2", price: $360, description: "Durable and reliable tool.", status: "Out of Stock", image: "images/tool2.jpg" },
     { name: "Water Pump 1", price: "$150", description: "Efficient water pump for residential use.", status: "In Stock", image: "images/pump1.jpg" },
     { name: "Water Pump 2", price: "$200", description: "Heavy-duty pump suitable for agricultural needs.", status: "In Stock", image: "images/pump2.jpg" },
     { name: "Solar Panel 1", price: "$300", description: "High-efficiency solar panel.", status: "In Stock", image: "images/solar1.jpg" },
     { name: "Solar Panel 2", price: "$350", description: "Durable solar panel for long-term use.", status: "In Stock", image: "images/solar2.jpg" }
-];
-
+]
 // Function to display all products
 function displayAllProducts() {
     const productList = document.getElementById('productList');
