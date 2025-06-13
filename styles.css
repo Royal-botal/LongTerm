@@ -283,4 +283,23 @@
     flex-shrink: 0;
   }
   
+  .footer-contact,
+.footer-social {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+.footer-contact-link,
+.footer-social-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-contact-link:hover,
+.footer-social-link:hover {
+  color: #4a90e2; /* subtle highlight on hover */
+}
   
