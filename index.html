@@ -3,54 +3,170 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Longterm Power Solutions - Online Shop</title>
+  <title>Longterm Power Solutions - Advertisement</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header">
+  <header>
     <div class="header-container">
-      <h1 class="logo" tabindex="0">Longterm Power solutions</h1>
-      <nav class="nav-links">
-        
+      <h1 class="logo" tabindex="0">Longterm Power Solutions</h1>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
         <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <div class="search-container">
-        <span class="material-icons" aria-hidden="true">search</span>
-        <input 
-          type="search" 
-          id="search-input" 
-          name="search" 
-          placeholder="Search products..." 
-          aria-label="Search products"
-          autocomplete="off" />
-      </div>
-      <button class="cart-button" aria-label="View shopping cart" tabindex="0">
-        <span class="material-icons">shopping_cart</span>
-        <span class="cart-count" id="cart-count" aria-live="polite" aria-atomic="true">0</span>
+      <button class="mobile-menu-btn" aria-label="Open navigation" aria-controls="mobile-nav" aria-expanded="false">
+        &#9776;
       </button>
     </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
   <main>
-    <section class="products-section" aria-label="Product catalog">
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2 class="hero-title">Empowering Your Future with Reliable Power Solutions</h2>
+        <p class="hero-desc">Discover our range of power products and services designed to keep your home and business running smoothly. From solar to water pumps, we have the expertise and equipment to meet your needs.</p>
+        <a href="contact.html" class="hero-cta">Contact Us Today</a>
+      </div>
+    </section>
+    <section class="products-section" aria-label="Featured Products">
+      <h3 class="section-title">Featured Products</h3>
       <div id="products-grid" class="products-grid" role="list"></div>
+    </section>
+    <section class="all-images-section">
+      <h3 class="section-title"></h3>
+      <div class="all-images-grid">
+        <div class="image-card">
+          <img src="images/Batterts ch.jpeg" alt="Battert" class="gallery-image" />
+          <div class="image-name">Battery</div>
+        </div>
+        <div class="image-card">
+          <img src="images/battery.jpeg" alt="Battery" class="gallery-image" />
+          <div class="image-name">Battery</div>
+        </div>
+        <div class="image-card">
+          <img src="images/drill bits.jpeg" alt="Drill bits" class="gallery-image" />
+          <div class="image-name">Drill bits</div>
+        </div>
+        <div class="image-card">
+          <img src="images/drills.jpeg" alt="Drills" class="gallery-image" />
+          <div class="image-name">Drills</div>
+        </div>
+        <div class="image-card">
+          <img src="images/IMG-20250412-WA0001.jpg" alt="IMG-20250412-WA0001" class="gallery-image" />
+          <div class="image-name">Diseal motor</div>
+        </div>
+        <div class="image-card">
+          <img src="images/IMG-20250412-WA0002.jpg" alt="IMG-20250412-WA0002" class="gallery-image" />
+          <div class="image-name">Diseal motor</div>
+        </div>
+        <div class="image-card">
+          <img src="images/IMG-20250412-WA0003.jpg" alt="IMG-20250412-WA0003" class="gallery-image" />
+          <div class="image-name">Pressure Washer</div>
+        </div>
+        <div class="image-card">
+          <img src="images/IMG-20250412-WA0004.jpg" alt="IMG-20250412-WA0004" class="gallery-image" />
+          <div class="image-name">Carwash machine </div>
+        </div>
+        <div class="image-card">
+          <img src="images/IMG-20250412-WA0007.jpg" alt="IMG-20250412-WA0007" class="gallery-image" />
+          <div class="image-name">Pressuer washer diseal</div>
+        </div>
+        <div class="image-card">
+          <img src="images/IMG-20250412-WA0008.jpg" alt="IMG-20250412-WA0008" class="gallery-image" />
+          <div class="image-name">Pressure washer</div>
+        </div>
+        <div class="image-card">
+          <img src="images/inverters.jpeg" alt="Inverters" class="gallery-image" />
+          <div class="image-name">Inverters</div>
+        </div>
+        <div class="image-card">
+          <img src="images/mini inverters.jpeg" alt="Mini inverters" class="gallery-image" />
+          <div class="image-name">Mini inverters</div>
+        </div>
+        <div class="image-card">
+          <img src="images/motor.jpeg" alt="Motor" class="gallery-image" />
+          <div class="image-name">Motor</div>
+        </div>
+        <div class="image-card">
+          <img src="images/Poshomill.jpeg" alt="Poshomill" class="gallery-image" />
+          <div class="image-name">Poshomill</div>
+        </div>
+        <div class="image-card">
+          <img src="images/power saws.jpeg" alt="Power saws" class="gallery-image" />
+          <div class="image-name">Power saws</div>
+        </div>
+        <div class="image-card">
+          <img src="images/pressure washer.jpeg" alt="Pressure washer" class="gallery-image" />
+          <div class="image-name">Pressure washer</div>
+        </div>
+        <div class="image-card">
+          <img src="images/pressure washers.jpeg" alt="Pressure washers" class="gallery-image" />
+          <div class="image-name">Pressure washers</div>
+        </div>
+        <div class="image-card">
+          <img src="images/screw drivers.jpeg" alt="Screw drivers" class="gallery-image" />
+          <div class="image-name">Screw drivers</div>
+        </div>
+        <div class="image-card">
+          <img src="images/solar inverter.jpeg" alt="Solar inverter" class="gallery-image" />
+          <div class="image-name">Solar inverter</div>
+        </div>
+        <div class="image-card">
+          <img src="images/solar pumps.jpeg" alt="Solar pumps" class="gallery-image" />
+          <div class="image-name">Solar pumps</div>
+        </div>
+        <div class="image-card">
+          <img src="images/solar.jpeg" alt="Solar" class="gallery-image" />
+          <div class="image-name">Solar</div>
+        </div>
+        <div class="image-card">
+          <img src="images/Tools.jpeg" alt="Tools" class="gallery-image" />
+          <div class="image-name">Tools</div>
+        </div>
+        <div class="image-card">
+          <img src="images/waterpumps.jpeg" alt="Waterpumps" class="gallery-image" />
+          <div class="image-name">Waterpumps</div>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer">
-    <p>© 2025 Longterm. All rights reserved.</p>
+    <p>© 2025 Longterm Power Solutions. All rights reserved.</p>
     <div class="footer-contact">
       <span class="material-icons" aria-hidden="true" style="vertical-align:middle;">call</span>
-      <a href="tel:+254716597568/+254796251445" class="footer-contact-link" aria-label="Contact phone number">+254716597568/+254715302103</a>
+      <a href="tel:+254716597568/+254796251445" class="footer-contact-link" aria-label="Contact phone number">+254716597568 / +254715302103</a>
+    
     </div>
     <div class="footer-social">
-      <a href="https://www.facebook.com/George Matasi " target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="George Matasi">
+      <a href="https://www.facebook.com/GeorgeMatasi" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="George Matasi">
         <span class="material-icons" aria-hidden="true">facebook</span>
         Facebook
       </a>
     </div>
   </footer>
   <script src="index.js"></script>
+  <script>
+    // Mobile nav toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('active');
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>
 

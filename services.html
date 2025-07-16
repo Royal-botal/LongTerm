@@ -8,38 +8,90 @@
 </head>
 <body>
     <header>
-        <h1>LongTerm Power Solutions</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div class="header-container">
+            <h1 class="logo" tabindex="0">Longterm Power Solutions</h1>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Open navigation" aria-controls="mobile-nav" aria-expanded="false">
+                &#9776;
+            </button>
+        </div>
+        <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service">
-                <h4>Solar Installation</h4>
-                <p>We provide professional solar panel installation services.</p>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2 class="hero-title">Our Professional Services</h2>
+                <p class="hero-desc">We offer a wide range of power solutions and technical services to keep your home and business running efficiently. Explore our expertise below.</p>
             </div>
-            <div class="service">
-                <h4>Water Pump Installation</h4>
-                <p>Expert installation of water pumps for various applications.</p>
+        </section>
+        <section class="products-section" aria-label="Our Services">
+            <h3 class="section-title">What We Offer</h3>
+            <div class="services-grid">
+                <div class="service-card advert-card">
+                    <img src="images/solar.jpeg" alt="Solar Installation" class="service-image advert-image">
+                    <div class="service-info">
+                        <h4 class="advert-title">Solar Installation</h4>
+                        <p class="advert-desc">Professional solar panel installation for homes and businesses, ensuring reliable and sustainable energy solutions.</p>
+                    </div>
+                </div>
+                <div class="service-card advert-card">
+                    <img src="images/waterpumps.jpeg" alt="Water Pump Installation" class="service-image advert-image">
+                    <div class="service-info">
+                        <h4 class="advert-title">Water Pump Installation</h4>
+                        <p class="advert-desc">Expert installation of water pumps for agricultural, residential, and commercial applications.</p>
+                    </div>
+                </div>
+                <div class="service-card advert-card">
+                    <img src="images/Tools.jpeg" alt="Repairs" class="service-image advert-image">
+                    <div class="service-info">
+                        <h4 class="advert-title">Repairs</h4>
+                        <p class="advert-desc">Comprehensive repair services for all types of power tools and equipment, handled by experienced technicians.</p>
+                    </div>
+                </div>
+                <div class="service-card advert-card">
+                    <img src="images/mini inverters.jpeg" alt="Maintenance Services" class="service-image advert-image">
+                    <div class="service-info">
+                        <h4 class="advert-title">Maintenance Services</h4>
+                        <p class="advert-desc">Regular maintenance to keep your equipment in top condition and prevent unexpected breakdowns.</p>
+                    </div>
+                </div>
             </div>
-            <div class="service">
-                <h4>Repairs</h4>
-                <p>We offer repair services for all types of tools and equipment.</p>
-            </div>
-            <div class="service">
-                <h4>Maintenance Services</h4>
-                <p>Regular maintenance services to keep your equipment in top shape.</p>
-            </div>
-        </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 LongTerm Power Solutions</p>
+    <footer class="footer">
+        <p>&copy; 2025 LongTerm Power Solutions. All rights reserved.</p>
+        <div class="footer-contact">
+            <span class="material-icons" aria-hidden="true" style="vertical-align:middle;">call</span>
+            <a href="tel:+254716597568/+254796251445" class="footer-contact-link" aria-label="Contact phone number">+254716597568 / +254715302103</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/GeorgeMatasi" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="George Matasi">
+                <span class="material-icons" aria-hidden="true">facebook</span>
+                Facebook
+            </a>
+        </div>
     </footer>
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileNav.classList.toggle('active');
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        });
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>
